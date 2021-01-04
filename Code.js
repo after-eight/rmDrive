@@ -193,10 +193,10 @@ function processThread(thread, label) {
 /**
  * Get all the starred threads within our label and process their attachments
  */
-function main(GMAIL_LABEL, GDRIVE_FILE) {
+function main(gmailLabel, gdriveFile) {
 
-  GMAIL_LABEL = _GMAIL_LABEL || GMAIL_LABEL;
-  GDRIVE_FILE = _GDRIVE_FILE || GDRIVE_FILE;
+  GMAIL_LABEL = gmailLabel || GMAIL_LABEL;
+  GDRIVE_FILE = gdriveFile || GDRIVE_FILE;
 
   getSubLabels(GMAIL_LABEL)
     .forEach((label) => getUnprocessedThreads(label)
